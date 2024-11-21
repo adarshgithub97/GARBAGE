@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+    CGC Payment  
+{% endblock %}
+{% block content %}
+<div class="image-container">
+    <h1 class="about"><i>MAKE PAYMENT</i></h1>
+    <img class="background-image" src="{% static 'img/payment.png' %}" alt="about-image">
+</div>
+<div class="shadow card text-center" style="width: 600px; height:300px;margin-left: 450px;margin-bottom: 50px;background-color: #e8edfd;">
+    <form action="{% url 'garbageapp:success' %}" method="POST" >
+        {% csrf_token %}
+        <div class="card-body pay-sec1">
+            <h5 class="card-title">Waste Type : <b>{{waste_type }}</b></h5>
+            <h5 class="card-title">Total Weight : <b>{{ weight }} kg</b></h5>
+            <h5 class="card-title">Minimum Service Charge: <b>Rs. 100/-</b></h5>
+            <h5 class="card-title">Total Amount: <b>Rs. {{ amount }}/-</b></h5>
+        </div>
+        <script src="https://checkout.razorpay.com/v1/checkout.js" data-key="rzp_test_JAeLcxoJpwFjEq"
+        data-amount="{{ amount|floatformat:0 }}00" data-currency="INR" data-order_id="{{payment.id}}" data-buttontext="Make Your Payment"
+        data-name="Professional Cipher" data-description="Django and Data Science"
+        data-image="https://example.com/your_logo.jpg" data-prefill.name="PC" data-prefill.email="pc@studygyaan.com"
+        data-theme.color="#F37254"></script>
+    </form>
+<style>
+    .razorpay-payment-button {
+        background-color: #1a8f2c;
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+}
+</style>
+</div>
+{% endblock %}
+
+

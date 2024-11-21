@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CGC Plantation Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />  <!--leaflet a flexible, lightweight, and open-source JavaScript library for creating interactive maps. -->
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .map-sec1 {
+            margin-top: 30px;
+            color: rgb(124, 4, 4);
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="map-sec1">Available Plants In Calicut</h1>
+    <div id="map" ></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map centered on Calicut
+        var map = L.map('map').setView([11.2588, 75.7804], 13); // Coordinates for Calicut city. (latitude 11.2588, longitude 75.7804) with a zoom level of 13.
+
+        // Add tile layer from OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Define scattered locations with random placement
+        var locations = [
+            { lat: 11.2350, lng: 75.7880, popup: 'Kallai',link: '/plant/',id:5},
+            { lat: 11.3305, lng: 75.7905, popup: 'Balussery',link: '/plant/',id:2 },
+            { lat: 11.2500, lng: 75.7740, popup: 'Mananchira',link: '/plant/',id:4 },
+            { lat: 11.2650, lng: 75.8100, popup: 'Thondayad',link: '/plant/',id:1 },
+            { lat: 11.1805, lng: 75.8100, popup: 'Beypore',link: '/plant/',id:7},
+            { lat: 11.3000, lng: 75.7630, popup: 'puthiyangadi',link: '/plant/',id:3 },
+            { lat: 11.2300, lng: 75.8500, popup: 'pantheerankave',link: '/plant/',id:6 }
+        ];
+
+        locations.forEach(function(location) {
+            L.marker([location.lat, location.lng]).addTo(map)
+            .bindPopup('<a href="/plant/' + location.id + '/">' + location.popup + '</a>');
+});
+
+    </script>
+</body>
+</html>
+
+

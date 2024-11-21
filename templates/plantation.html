@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+    CGC Plantations
+{% endblock %}
+{% block content %}
+<div class="image-container">
+    <h1 class="about"><i>{{ detail.pname }} Plantation</i></h1>
+    <img class="background-image" src="{% static 'img/plantation.png' %}" alt="about-image">
+</div>
+<div>
+    <section class="sample-text-area">
+        <div class="container">
+            <p>{{ detail.desc }}</p>
+        </div>
+    </section>
+    <div>
+    <a href="{% url 'garbageapp:payment' %}" style="text-decoration: none;color: black;"><button type="submit" class="btn plant-sec1">Make Payment</button></a>
+    </div>
+</div>
+{% endblock %}
+
+

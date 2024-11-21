@@ -1,0 +1,633 @@
+body {
+    margin: 0;
+}
+
+/* header section */
+.header1 {
+    background-color: #03075c ;
+    position: sticky;
+    color: whitesmoke;
+    height: 50px;
+    font-size: 17px;
+}
+
+.social {
+    margin-left: 1rem;
+    color: white;
+}
+
+/* navbar section */
+.clt {
+    color: #2b32bd ;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 120px;
+    padding-top: 15px;
+}
+
+.nav-item {
+    font-size:17px;
+    padding-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+} 
+
+.search1 {
+   margin-left: 160px; 
+   padding-top: 15px;
+   width: 300px;
+}
+
+/* footer section */
+.footer1 {
+    font-size: 18px;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* banner image section index page */
+.image1 {
+    width: 100%;
+    height: 700px;
+}
+
+.carousel-caption {
+    bottom: 34%;
+}
+
+.book-now-button {
+    background-color: #f6eded;
+    color: rgb(9, 9, 137);
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-now-button span {
+    position: relative;
+    z-index: 2;
+}
+
+.book-now-button::before, .book-now-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgb(48 48 181 / 15%);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: width 0.4s ease, height 0.4s ease;
+    border-radius: 50%;
+}
+
+.book-now-button::after {
+    background: rgb(48 48 181 / 15%);
+    transition-delay: 0.1s;
+}
+
+.book-now-button:hover::before, .book-now-button:hover::after {
+    width: 400%;
+    height: 400%;
+}
+
+.book-now-button:hover {
+    transform: scale(1.10);
+    box-shadow: 0 20px 55px  rgba(111, 4, 234, 0.6);
+}
+
+.book-now-button:active {
+    transform: scale(1.);
+    box-shadow: 0 8px 15px rgba(111, 4, 234, 0.6);
+}
+
+.book-now-button:focus {
+    outline: none;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(53, 11, 240, 0.5), rgba(152, 166, 245, 0.1));
+    top: 0;
+    left: -100%;
+    z-index: 1;
+    transform: skewX(-30deg);
+    transition: left 0.5s ease-in-out;
+}
+
+.book-now-button:hover .wave {
+    left: 100%;
+}
+
+.carousel-caption .scndbtn {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 40px 40px;
+    border-radius: 8px;
+    background-color:hsl(0, 33%, 97%) ;
+    font-weight: bold;
+}
+
+/* index page */
+.index-sec1 {
+    width: 100%;
+    height:300px;
+    background-color: #fabc7e ;
+}
+
+.index-sec2 {
+    text-align: center;
+    color: maroon;
+    font-size: 20px;
+    padding-top: 55px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
+}
+
+.index-sec3 {
+    width: 100%;
+    height:max-content;
+    background-color: whitesmoke;
+}
+
+.index-sec4 {
+    height: 570px;
+    border-radius: 18px;
+    border-color: #661004;
+    border-width: 2px;
+}
+
+.index-sec4:hover {
+    background-color: #f1948a;
+    height: 570px;  
+    border-radius: 18px;
+    border-color:black;  
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+
+.index-sec5 {
+    font-size: 16px;
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 10px;
+    margin-inline-start: -4px;
+    text-align: left;
+    line-height: 28px;
+}
+
+.index-sec5:hover {
+    background-color: none;
+}
+
+.card-body h2{
+    font-size:19px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:bold;
+    text-transform:uppercase;
+    padding-top: 10px;
+}
+
+.index-icon {
+    margin-top: -15px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50;
+}
+
+.index-sec6 {
+    width: 100%;
+    height:max-content;
+    background-color: whitesmoke;
+}
+
+.index-sec7 {
+    height: 250px;
+    background-color:#f4f6f6; 
+}
+
+.index-sec8 {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin-inline-start: -10px;
+    margin-top: -45px;
+} 
+
+.index-sec9 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-inline-start: 7px;
+    margin-top: -40px;
+} 
+
+.index-sec10 {
+    text-align: center;
+    margin-top: -55px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.index-sec11 {
+    text-align: center;
+    margin-top: -20px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.index-sec12 {
+    font-size: 15px;
+    text-align: left;
+    font-weight: 900px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 24px;
+    padding-top: 5px;
+}
+
+.index-sec7:hover {
+    background-color: #508356;
+    height: 250px;  
+    border-radius: 18px;
+    border-color:black;  
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+
+.index-sec13 {
+    width: 100%;
+    height:650px;
+    background-color: whitesmoke;
+}
+
+.index-sec14 {
+    display: block;
+    width: 560px;
+    height: 465px;
+    margin-top: 100px; 
+    border-radius: 10%;
+    padding-top: 20px;
+}
+
+.index-sec15 {
+    text-align: center;
+    color: maroon;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 100px;
+    font-size: 40px;
+    padding-left: 50px;
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
+}
+ 
+.index-sec16 {
+    width: 100%; 
+    height: 365px; 
+    background-color: #fabc7e;
+}
+
+.index-sec17 {
+    padding-left: 300px;
+    padding-top: 50px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.index-sec17::after {
+    background-color: maroon;
+    content: "";
+    display: table;
+    height: 3px;
+    width: 72px;
+    margin-top: 12px;
+}
+
+.index-sec18 {
+    padding-left: 315px;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.index-sec19 {
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 0.2;
+}
+
+.contact-icon {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+/* about page */
+.about {
+    text-align: center;
+    padding-bottom: 60px;
+    font-weight: bold;
+    position: absolute; /* Allows positioning relative to the container */
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Adjusts to center the text */
+    color:black; 
+    font-size: 3rem; 
+    text-shadow: 2px 2px 4px rgba(226, 216, 216, 0.6); 
+
+}
+
+.sample-text-area {
+    padding: 0 0 70px 0;
+   
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 19px;
+}
+
+/* contact page */
+.image-container {
+    position: relative; /*Establishes a context for absolute positioning  */
+    width: 100%; 
+    height: 300px;  
+} 
+
+.background-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Ensures the image covers the container */
+    display: block; /* Remove any extra space below the image */
+}
+
+.cnt-box1 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: none;
+}
+
+.cnt-box2 {
+    margin-top: 20px;
+    border-color: #661004;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.icon {
+    background-color:#d6e520;
+    border-radius: 80%;
+    color:#0E3500;
+    display: block;
+    font-size: 30px;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 60px;
+    margin-top: 5px;
+    margin-bottom: -53px; 
+}
+
+.cnt-text {
+    font-weight: 700; 
+    font-family: "Poppins", sans-serif;
+    margin-inline-start: 90px;
+}
+
+.contact-bcimg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 110px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cnt-frm {
+    width: 225px;
+    height: 50px;
+    border-radius: 15px;
+    border-color: black;
+    border-width: 2px;
+    padding-left: 50px;
+}
+
+.cnt-frm-btn {
+    width: 170px;
+    height: 50px;
+    border-radius: 15px;
+    border-color: black;
+    border-width: 2px;
+    padding-left: 15px;
+    display: block;
+    margin: auto;
+    background-color:#d6e520;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+/* waste-type.html */
+.type-sec1 {
+    padding-top: 55px;
+    height: 750px;
+}
+
+.type-sec2 {
+    background-color: #FFC300 ;
+    margin-left: 80px;
+    height: 45px ;
+    width: 120px;
+    margin-top: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.type-sec2:hover {
+    background-color: #0cb31a  ;
+    transform: scale(1.1);
+}
+
+/* waste-booking.html */
+.book-sec1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: maroon;
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+/* login.html and register.html */
+.log-sec1 {
+    height: 600px;
+    background-color: #c9d6ff;
+    background: linear-gradient(to right,#e2e2e2,#c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 87vh;
+}
+
+.log-sec2 {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.log-sec1 button {
+    background-color: #512da8;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.log-sec2 button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.log-sec2 form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.log-sec2 input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.toggle {
+    background-color: #512da8;
+    height: 100%;
+    background: linear-gradient(to right,#5c6bc0,#512da8);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+/* registration time messages */
+.message-box {
+    margin-top: -490px;
+    margin-inline-start: -100px;
+    width: 630px;
+}
+
+.message {
+    padding: 13px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #eb1212;
+    padding-left: 180px;
+    padding-top: 15px;
+}
+
+/* plantation.html */
+.plant-sec1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(10, 1, 1);
+    background-color: #FFC300 ;
+    margin-left: 650px;
+    margin-top: -35px;
+    height: 50px ;
+    width: 175px;
+    font-size: 20px; 
+    margin-bottom: 45px;
+}
+
+/* payment.html */
+.pay-sec1 {
+    padding-top: 50px;
+    padding-left: 130px;
+    text-align: left;
+}
+
+

@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="https://kit.fontawesome.com/8b8ca58c15.js" crossorigin="anonymous"></script>
+    <title> {% block title %} {% endblock %} </title>
+</head>
+<body>
+    <div>
+        <div class="sticky-top" >
+            <header class="header1">
+                <img src="{% static 'img/logo.png' %}" alt="logoimage" height="62px" width="115px">
+                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                <h style="margin-right: 3rem;">Calicut Garbage Collection</h>
+                <i class="fa-solid fa-envelope"></i>
+                <h>mycltgarbage@gmail.com</h>
+                <a href="https://www.facebook.com/profile.php?id=61563953764716"><i class="fa-brands fa-facebook-f" style="margin-left: 45rem;color:white;"></i></a>
+                <a href="https://www.instagram.com/my_cgc_2024?utm_source=qr&igsh=ZW5xd241eTVzcHU2"><i class="fa-brands fa-instagram social"></i></a>
+                <a href="https://www.linkedin.com/in/calicut-garbage-collection-bab282322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in social"></i></a>
+            </header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <h class="clt">My Calicut</h>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" style="margin-left: 15rem;">
+                            <a class="nav-link text-dark" aria-current="page" href="{% url 'garbageapp:index' %}">HOME</a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 2.5rem;">
+                            <a class="nav-link text-dark" href="{% url 'garbageapp:about' %}">ABOUT</a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 2.5rem;">
+                            <a class="nav-link text-dark" href="{% url 'garbageapp:contact' %}">CONTACT US</a>
+                        </li>
+                        {% if request.session.user %}
+                        <li class="nav-item" style="margin-left: 2.5rem;">
+                            <a class="nav-link text-dark" >WELCOME&nbsp;&nbsp;{{ request.session.user.username|upper }}!</a>
+                        </li>
+                        <li class="nav-item" style="margin-left: 2.5rem;">
+                            <a class="nav-link text-dark" href="{% url 'garbageapp:logout' %}">LOGOUT</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item" style="margin-left: 2.5rem;">
+                            <a class="nav-link text-dark" href="{% url 'garbageapp:login' %}">LOGIN</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                <!-- <form class="d-flex search1" role="search" action="#" method="get">
+                    {% csrf_token %}
+                    <input class="form-control me-2" type="search" placeholder="Search" name="q" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"  style="margin-left: 1rem;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form> -->
+            </div>
+        </nav>
+    </div>
+       
+        {% block content %}
+        {% endblock %}
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+        <footer>
+            <div class="footer1" style="background-color: #e4e5f8 ">
+                <p> &copy; Calicut Garbage Collection. All rights reserved </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

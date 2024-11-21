@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+    Types of Garbages 
+{% endblock %}
+{% block content %}
+<div class="image-container">
+    <h1 class="about"><i>TYPES OF GARBAGES</i></h1>
+    <img class="background-image" src="{% static 'img/types.png' %}" alt="about-image">
+</div>
+<div>
+    <div class="container">
+        <div class="row mx_auto">
+            <div class="col-12 col-md-4 type-sec1">
+                <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                    <img class="card-img-top" src="{% static 'img/bio-degradable.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h2 class="card-title" style="text-align: center;">bio-degradable</h2> 
+                        <p class="card-text">These substances are non-toxic to the environment comprising of only natural materials. 
+                                             Examples include food scraps, paper, and plant materials.</p>
+                        {% if request.session.user %}
+                        <a href="{% url 'garbageapp:booking' %}"><button class="btn type-sec2">
+                                        Book Now
+                                   </button>
+                        </a>
+                        {% else %}
+                        <a href="{% url 'garbageapp:login' %}"><button class="btn type-sec2" style="width: 200px;margin-left: 35px;">Log In For Booking</button></a> 
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 type-sec1">
+                <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                    <img class="card-img-top" src="{% static 'img/non-biodegradable.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h2 class="card-title" style="text-align: center;">non-biodegradable</h2> 
+                        <p class="card-text">These are materials that cannot be easily broken down by natural processes 
+                                        and persist in the environment for a long time. Examples include plastics, glass, and metals.</p>
+                        {% if request.session.user %}
+                        <a href="{% url 'garbageapp:booking'%}"><button class="btn type-sec2" style="margin-top: 8px;">
+                                        Book Now
+                                    </button>
+                        </a>
+                        {% else %}
+                        <a href="{% url 'garbageapp:login' %}"><button class="btn type-sec2" style="width: 200px;margin-left: 35px;margin-top: 7px;">Log In For Booking</button></a> 
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 type-sec1">
+                <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+                    <img class="card-img-top" src="{% static 'img/hazardous.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h2 class="card-title" style="text-align: center;">hazardous</h2> 
+                        <p class="card-text">These are materials that pose a significant risk to human health or the environment. 
+                                        Examples include chemicals, batteries, and certain industrial by-products.</p>
+                        {% if request.session.user %}
+                        <a href="{% url 'garbageapp:booking' %}"><button class="btn type-sec2">
+                                            Book Now
+                                   </button>
+                        </a>
+                        {% else %}
+                        <a href="{% url 'garbageapp:login' %}"><button class="btn type-sec2" style="width: 200px;margin-left: 35px;">Log In For Booking</button></a> 
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
